@@ -9,7 +9,6 @@ import org.junit.rules.TestRule;
 
 public abstract class BaseTest {
 
-
     @Rule
     public TestRule report = new TextReport().onFailedTest(true).onSucceededTest(true);
     @Rule

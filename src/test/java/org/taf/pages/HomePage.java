@@ -5,9 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 
-public class HomePage extends BasePage {
-
-    private final String url;
+public class HomePage extends AbstractBasePage {
 
 
     private static final String DEFAULT_URL = "/index.php";
@@ -38,12 +36,8 @@ public class HomePage extends BasePage {
 
     private final SelenideElement clearFix = $(".clearfix");
 
-
-    public HomePage() {
-        this.url = baseUrl + DEFAULT_URL;
-    }
-
+    @Override
     public String getPageUrl() {
-        return url;
+        return baseUrl + DEFAULT_URL;
     }
 }
