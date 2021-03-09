@@ -2,7 +2,7 @@ package org.taf.pages;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 
-public class AuthentificationPage extends AbstractBasePage {
+public class AuthentificationPage extends AbstractPageWithHeader {
 
     private static final String DEFAULT_URL = "/index.php?controller=authentication&back=my-account";
 
