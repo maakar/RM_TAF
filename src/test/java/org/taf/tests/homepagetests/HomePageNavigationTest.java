@@ -1,6 +1,5 @@
 package org.taf.tests.homepagetests;
 
-import com.codeborne.selenide.Condition;
 import org.junit.Test;
 import org.taf.pages.HomePage;
 import org.taf.steps.CommonTestSteps;
@@ -33,7 +32,7 @@ public class HomePageNavigationTest extends BaseTest {
 	@Test
 	public void checkTransitionOnLogoClick() {
 		openHomePageAndCheckUrl();
-		homePage.click("headerLogo");
+		homePage.headerElement().headerLogo().click();
 		assertEquals(homePage.getPageUrl(), url());
 	}
 
